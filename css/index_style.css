@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #0D0D0D;
+    color: #f9f6f6 !important;
+    overflow: hidden;
+}
+
+/* loading screen */
+.loadingScreen {
+    z-index: 99999;
+    display: flex;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: rotation 2s ease-in-out infinite alternate;
+}
+
+.loader::after {
+    border-color: #FF3D00;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* nav-side */
+nav {
+    background-color: #0D0D0D;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+}
+
+nav ul li {
+    margin-bottom: 12px;
+    cursor: pointer;
+    list-style-type: none;
+    top: 0;
+    position: relative;
+}
+
+.nav-footer .icon i {
+    cursor: pointer;
+}
+
+nav .out-content img {
+    width: 120%;
+}
+
+nav .out-content .icon i {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* search inputs */
+#searchPosition input::placeholder,
+#searchPosition input {
+    color: white !important;
+}
+
+/* section */
+section .row .col-md-3 {
+    cursor: pointer;
+}
+
+section .row .layer {
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    background-color: #f9f6f6ca;
+    transition: all 0.5s;
+}
+
+section .row .col-md-3:hover .layer {
+    top: 0px;
+    bottom: 0px;
+}
+
+/* input */
+#allData input {
+    width: 100%;
+}

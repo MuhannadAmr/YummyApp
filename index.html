@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="loadingScreen bg-black position-fixed top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+        <span class="loader"></span>
+    </div>
+    <nav class="position-fixed  h-100">
+        <div class="inner-content d-flex flex-column justify-content-between h-100 p-4">
+            <div class="links w-75">
+                <ul class="list-unstyledt overflow-hidden">
+                    <li onclick="displaySearchInputs()" class="wow">Search</li>
+                    <li onclick="getCategories()" class="wow">Categories</li>
+                    <li onclick="getArea()" class="wow">Area</li>
+                    <li onclick="getIngredients()" class="wow">Ingredients</li>
+                    <li onclick="displayContacts()" class="wow">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer w-75">
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div>
+                    <p class="">Copyright Â© 2019 All Rights
+                        Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div
+            class="out-content bg-white text-black h-100 d-flex flex-column justify-content-between p-4 position-absolute top-0 end-0 w-25">
+            <img src="imgs/logo.png" alt="logo site" class="">
+            <i class="fa-solid fa-xmark fa-3x"></i>
+            <i class="fa-solid fa-bars fa-2x d-none"></i>
+            <div class="icon">
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="meal-details">
+        <div class="container">
+            <div class="row py-3">
+                <!-- <div class="col-md-4">
+                    <img src="imgs/3.jpg" alt="" class="img-fluid rounded-2">
+                    <h3>Corba</h3>
+                </div>
+                <div class="col-md-8">
+                    <h3>Instructions</h3>
+                    <p></p>
+                    <h2>Area : <span>Turkish</span></h2>
+                    <h2>Category : <span>Side</span></h2>
+                    <h2>Recipes :</h2>
+                    <div class="d-flex g-3 flex-wrap">
+                    </div>
+                    <h2>Recipes :</h2>
+                    <div class="d-flex g-3 flex-wrap mb-3">
+                    </div>
+                    <a target="_blank" href="#" class="btn btn-success">Source</a>
+                    <a target="_blank" href="#" class="btn btn-danger">Youtube</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div id="searchPosition" class="w-75 mx-auto my-5">
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <input type="text" placeholder="Search By Name" class="form-control bg-transparent" onkeyup="searchByName(this.value)">
+            </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="Search By First Letter" class="form-control bg-transparent text-white" onkeyup="searchByLetter(this.vlue)">
+            </div>
+        </div> -->
+    </div>
+    <section>
+        <div class="container">
+            <div id="allData" class="row py-5 g-4 ">
+                <!-- <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <div>
+                            <img src="imgs/3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="layer position-absolute d-flex align-items-center text-dark">
+                            <h3>cobr</h3>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="col-md-6">
+                        <input type="text" id="nameInput" placeholder="Enter Your Name" class="form-control">
+                        <div id="nameAlert" class="alert alert-danger w-100 mt-2">
+                            Special characters and numbers not allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="emailInput" placeholder="Enter Your Email" class="form-control">
+                        <div id="emailAlert" class="alert alert-danger w-100 mt-2">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="phoneInput" placeholder="Enter Your Phone" class="form-control">
+                        <div id="phoneAlert" class="alert alert-danger w-100 mt-2">
+                            Enter valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="ageInput" placeholder="Enter Your Age" class="form-control">
+                        <div id="ageAlert" class="alert alert-danger w-100 mt-2">
+                            Enter valid age
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="passwordInput" placeholder="Enter Your Password" class="form-control">
+                        <div id="passwordAlert" class="alert alert-danger w-100 mt-2">
+                            Enter valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="repasswordInput" placeholder="Repassword" class="form-control">
+                        <div id="repasswordAlert" class="alert alert-danger w-100 mt-2">
+                            Enter valid repassword 
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-outline-danger disabled" id="buttonSubmit">Submit</button>
+                    </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/mine.js"></script>
+</body>
+
+</html>
