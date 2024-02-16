@@ -74,7 +74,9 @@ nav ul li {
 nav .out-content img {
     width: 120%;
 }
-
+nav .out-content i{
+    cursor: pointer;
+}
 nav .out-content .icon i {
     display: block;
     margin-bottom: 5px;

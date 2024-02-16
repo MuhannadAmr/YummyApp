@@ -294,6 +294,27 @@ function displayContacts() {
                         <button class="btn btn-outline-danger disabled" id="buttonSubmit">Submit</button>
                     </div>
     `
+
+    // ===================================================
+    
+    $("#nameInput").focus(function () {
+        nameInputOn = true;
+    })
+    $("#emailInput").focus(function () {
+        emailInputOn = true;
+    })
+    $("#phoneInput").focus(function () {
+        phoneInputOn = true;
+    })
+    $("#ageInput").focus(function () {
+        ageInputOn = true;
+    })
+    $("#passwordInput").focus(function () {
+        passwordInputOn = true;
+    })
+    $("#repasswordInput").focus(function () {
+        repasswordInputOn = true;
+    })
 }
 function nameValidation() {
     let regex = /^[a-zA-z]+$/
@@ -324,24 +345,7 @@ let phoneInputOn = false;
 let ageInputOn = false;
 let passwordInputOn = false;
 let repasswordInputOn = false;
-$("#nameInput").focus(function () {
-    nameInputOn = true;
-})
-$("#emailInput").focus(function () {
-    emailInputOn = true;
-})
-$("#phoneInput").focus(function () {
-    phoneInputOn = true;
-})
-$("#ageInput").focus(function () {
-    ageInputOn = true;
-})
-$("#passwordInput").focus(function () {
-    passwordInputOn = true;
-})
-$("#repasswordInput").focus(function () {
-    repasswordInputOn = true;
-})
+
 function checkValidation() {
     if (nameInputOn) {
         if (nameValidation().test($("#nameInput").val())) {
