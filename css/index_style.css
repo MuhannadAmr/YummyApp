@@ -110,3 +110,9 @@ section .row .col-md-3:hover .layer {
 #allData input {
     width: 100%;
 }
+/* media query */
+@media screen and (max-width: 1200px) {
+    body{
+        margin-left: 82.0125px;
+    }
+}

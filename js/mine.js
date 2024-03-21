@@ -54,6 +54,7 @@ let innerDetails = document.querySelector(".meal-details .row");
 async function getMealDetails(idMeal) {
     $(".loadingScreen").fadeIn(300);
     innerData.innerHTML = "";
+    innerSearchInput.innerHTML = "";
     let res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
     res = await res.json();
     displayMealDetails(res.meals[0]);
